@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    background-color: #18191B;
+    color: white;
+}
+
+html {
+    font-size: 20px;
+}
+
+section::-webkit-scrollbar-track {
+    background-color: darkblue;
+}
+
+header {
+    overflow: auto;
+    z-index: 9;
+    position: fixed;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    z-index: 40;
+    #navbar {
+        outline: none;
+        overflow: auto;
+        transition-timing-function: ease-out;
+        transition: 0.7s;
+        background: transparent;
+        font-family: 'Jost', sans-serif;
+        font-weight: 600;
+        padding: 1.5em;
+        z-index: 30;
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            .logo-archi {
+                transition: 1s;
+                margin-left: 0.4em;
+                background-size: cover;
+                width: 15%;
+                img {
+                    font-size: 2em;
+                    vertical-align: middle;
+                }
+            }
+            .navbar-list {
+                transition: 0.7s;
+                text-decoration: none;
+                display: flex;
+                width: 70%;
+                justify-content: right;
+                li {
+                    cursor: pointer;
+                    color: white;
+                    text-align: center;
+                    margin: 0.5em 1.5em;
+                    font-size: 0.75em;
+                    &::marker {
+                        color: #FFDE00;
+                    }
+                    &:first-child {
+                        list-style-type: none;
+                    }
+                    &:hover {
+                        color: #FFDE00;
+                        transition: 0.7s;
+                    }
+                    &:last-child {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .menu {
+        background: #111;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 1.3em;
+        height: 0;
+        opacity: 0;
+        display: none;
+        transition: 0.7s cubic-bezier(.74, -0.03, .83, .67);
+        ul {
+            margin: 1em auto;
+        }
+        li {
+            margin: 1em 0;
+        }
+        div {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+            padding: 6em 1em 3em 1em;
+            height: 100%;
+        }
+        .social-media {
+            margin: 2em 0;
+            li {
+                display: inline-block;
+                margin: 0 0.5em;
+            }
+        }
+        .menu-open {
+            height: 100vh;
+            opacity: 1;
+            display: block;
+        }
+    }
+}
+
+main {
+    overflow: hidden;
+    width: 100%;
+    background-position: 100%;
+    margin-top: -2.5%;
+    font-family: 'Jost', sans-serif;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    background-image: url(https://www.designesia.com/archi/images/background/screenshots.jpg);
+    padding-top: 4em;
+    padding-bottom: 5em;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .carusel {
+        transition-timing-function: ease-in-out;
+        transition-delay: 1.25s;
+        transition-duration: 1s!important;
+        padding: 2%;
+        text-transform: uppercase;
+        line-height: 72px;
+        font-weight: bold;
+        h1 {
+            font-size: 70px;
+        }
+    }
+    .carousel-foot {
+        transition-timing-function: ease-in-out;
+        transition-delay: 1.4s;
+        transition-duration: 1s!important;
+        font-size: 0.9em;
+    }
+    .big-logo {
+        transition-timing-function: ease-in-out;
+        transition-delay: 1.1s;
+        transition-duration: 1s!important;
+        &:root {
+            background-attachment: fixed;
+        }
+    }
+    .small-logo {
+        img {
+            transition-timing-function: ease-in-out;
+            transition-delay: 1.9s;
+            transition-duration: 1s!important;
+            padding-top: 2%;
+        }
+    }
+    h5 {
+        transition-timing-function: ease-in-out;
+        transition-delay: 1.9s;
+        transition-duration: 1s!important;
+        color: #68af3b;
+        font-size: 0.7em;
+    }
+    h6 {
+        transition-timing-function: ease-in-out;
+        transition-delay: 1.9s;
+        transition-duration: 1s!important;
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+        font-size: 0.5em;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+}
+
+.navbar-active {
+    width: 100%;
+    background: #111!important;
+    padding: 1em!important;
+}
+
+.menu-open {
+    height: 105vh!important;
+    opacity: 1!important;
+    z-index: 10;
+}
+
+.logo-opacity {
+    opacity: 0;
+}
+
+.menu {
+    font-family: 'Jost', sans-serif;
+    overflow: hidden;
+    background: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    height: 0;
+    opacity: 0;
+    transition: 0.7s cubic-bezier(.74, -0.03, .83, .67);
+    img {
+        padding: 3em;
+    }
+    ul {
+        li {
+            list-style-type: none;
+            padding: 0.5em;
+            a {
+                color: white;
+                text-decoration: none;
+                &:hover {
+                    color: #FFDE00;
+                    transition: 0.7s;
+                }
+            }
+        }
+    }
+    .social-media {
+        display: flex;
+        justify-content: center;
+        margin-top: 10%;
+        li {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.web-powered {
+    overflow: auto;
+    text-align: center;
+    padding: 2em 0;
+    p {
+        &:first-of-type {
+            transition-timing-function: ease-in-out;
+            transition-delay: 0.1s;
+            transition-duration: 0.7s!important;
+            font-weight: 200;
+            background: linear-gradient(#ffd003, #3e6ecc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 10em;
+        }
+        &:last-of-type {
+            transition-timing-function: ease-in-out;
+            transition-delay: 0.1s;
+            transition-duration: 0.7s!important;
+            font-weight: 300;
+            font-size: 2.3em;
+            margin-top: -0.5em;
+        }
+    }
+}
+
+.feedback {
+    overflow: auto;
+    .f-header {
+        text-align: center;
+        padding: 3em;
+        font-size: 1.5em;
+        letter-spacing: 0;
+        font-weight: 500;
+    }
+    .owl-carousel2 {
+        transition-delay: 500;
+    }
+    .card {
+        margin: auto;
+        width: 85%;
+        padding: 1.7em;
+        margin: auto;
+        background-color: #222222;
+        color: #cccccc;
+        border-radius: 3%;
+        text-align: center;
+        font-size: 0.75em;
+        .star {
+            .star-item {
+                margin: 1em 0;
+                letter-spacing: 7px;
+                color: #FFDE00;
+            }
+        }
+        p {
+            &:first-of-type {
+                line-height: 30px;
+            }
+            &:last-of-type {
+                font-size: 0.75em;
+                margin: 0.5em 0;
+                &::before {
+                    content: "by ";
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
+//Responsive
+@media only screen and (max-width: 700px) {
+    #navbar {
+        .navbar-list {
+            li {
+                display: none!important;
+                &:last-child {
+                    display: inline-block!important;
+                }
+            }
+        }
+    }
+    main {
+        .carusel {
+            h1 {
+                font-size: 40px;
+            }
+        }
+        .big-logo {
+            width: 23%;
+            margin-inline: auto;
+            img {
+                width: 70%;
+            }
+        }
+    }
+    .web-powered {
+        p {
+            &:first-of-type {
+                font-size: 20vw;
+            }
+        }
+    }
+    .feedback {
+        .f-header {
+            font-size: 5vw;
+        }
+    }
+}
