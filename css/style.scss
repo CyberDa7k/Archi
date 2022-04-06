@@ -26,12 +26,11 @@ header {
     top: -30px;
     left: 0;
     width: 100%;
-    z-index: 40;
     #navbar {
         outline: none;
         overflow: auto;
         transition-timing-function: ease-out;
-        transition: 0.7s;
+        transition: 0.5s;
         background: transparent;
         font-family: 'Jost', sans-serif;
         font-weight: 600;
@@ -77,45 +76,6 @@ header {
                     }
                 }
             }
-        }
-    }
-    .menu {
-        background: #111;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        font-size: 1.3em;
-        height: 0;
-        opacity: 0;
-        display: none;
-        transition: 0.7s cubic-bezier(.74, -0.03, .83, .67);
-        ul {
-            margin: 1em auto;
-        }
-        li {
-            margin: 1em 0;
-        }
-        div {
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            flex-direction: column;
-            padding: 6em 1em 3em 1em;
-            height: 100%;
-        }
-        .social-media {
-            margin: 2em 0;
-            li {
-                display: inline-block;
-                margin: 0 0.5em;
-            }
-        }
-        .menu-open {
-            height: 100vh;
-            opacity: 1;
-            display: block;
         }
     }
 }
@@ -203,6 +163,10 @@ main {
     z-index: 10;
 }
 
+.body-owerflow {
+    overflow-y: hidden;
+}
+
 .logo-opacity {
     opacity: 0;
 }
@@ -238,6 +202,19 @@ main {
             }
         }
     }
+    .menu-button {
+        padding-top: 4%;
+        cursor: pointer;
+        color: white;
+        text-align: center;
+        margin: 0.5em 1.5em;
+        font-size: 0.75em;
+        text-decoration: none;
+        &:hover {
+            color: #FFDE00!important;
+            transition: 0.7s;
+        }
+    }
     .social-media {
         display: flex;
         justify-content: center;
@@ -251,11 +228,16 @@ main {
 }
 
 .web-powered {
+    visibility: visible;
+    margin: auto;
+    width: 100%;
     overflow: auto;
     text-align: center;
     padding: 2em 0;
     p {
         &:first-of-type {
+            margin: auto;
+            width: 80%;
             transition-timing-function: ease-in-out;
             transition-delay: 0.1s;
             transition-duration: 0.7s!important;
@@ -266,6 +248,8 @@ main {
             font-size: 10em;
         }
         &:last-of-type {
+            margin: auto;
+            width: 80%;
             transition-timing-function: ease-in-out;
             transition-delay: 0.1s;
             transition-duration: 0.7s!important;
@@ -277,7 +261,10 @@ main {
 }
 
 .feedback {
-    overflow: auto;
+    overflow-x: hidden;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 10%;
     .f-header {
         text-align: center;
         padding: 3em;
@@ -286,6 +273,9 @@ main {
         font-weight: 500;
     }
     .owl-carousel2 {
+        overflow-x: hidden;
+        margin: auto;
+        width: 95%;
         transition-delay: 500;
     }
     .card {
@@ -315,6 +305,59 @@ main {
                 &::before {
                     content: "by ";
                     opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
+.reason {
+    width: 80%;
+    margin: auto;
+    padding-top: 7%;
+    h2 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .boxes {
+        padding-top: 6%;
+        display: flex;
+        flex-wrap: wrap;
+        .box {
+            display: flex;
+            width: 33.33333%;
+            padding: 25px 25px 25px 0;
+            .box-icon {
+                transition-duration: 1s;
+                background-size: cover;
+                .icon-class {
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 60px;
+                    height: 60px;
+                    visibility: visible;
+                    background: linear-gradient(to bottom, rgba(242, 135, 4, 1) 0%, rgba(255, 208, 3, 1) 100%);
+                    i {
+                        text-align: center;
+                        height: auto;
+                        font-size: 40px;
+                    }
+                }
+            }
+            .box-text {
+                padding-left: 18px;
+                h4 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-weight: 300;
+                    font-size: 15px;
+                    color: #bbbbbb;
                 }
             }
         }
@@ -357,6 +400,19 @@ main {
     .feedback {
         .f-header {
             font-size: 5vw;
+        }
+    }
+}
+
+@media only screen and (max-width: 965px) {
+    .reason {
+        padding-top: 12%;
+        .boxes {
+            padding-top: 12%;
+            flex-direction: column;
+            .box {
+                width: 90%;
+            }
         }
     }
 }

@@ -1,11 +1,18 @@
-AOS.init();
+AOS.init({
+    once: true
+
+});
 const menBtn = document.querySelector(".fa-solid");
 const navbar = document.getElementById("navbar");
 const menu = document.querySelector(".menu");
 const logo = document.querySelector(".logo-archi")
+const menBtn2 = document.querySelector(".menu-button");
+const body = document.querySelector("body")
 
 const offset = 50;
-
+// window.onbeforeunload = function() {
+//     window.scrollTo(0, 0);
+// }
 window.addEventListener("scroll", () => {
     if (pageYOffset > offset) {
         navbar.classList.add('navbar-active')
@@ -33,13 +40,21 @@ $('.owl-one').owlCarousel({
         }
     },
 })
+
 menBtn.addEventListener('click', () => {
-    menu.classList.toggle('menu-open')
-    logo.classList.toggle('logo-opacity')
+    menu.classList.add('menu-open')
+    logo.classList.add('logo-opacity')
+    body.classList.add('body-owerflow')
+
 });
+menBtn2.addEventListener('click', () => {
+    menu.classList.remove('menu-open')
+    logo.classList.remove('logo-opacity')
+    body.classList.remove('body-owerflow')
+});
+
 $('.owl-two').owlCarousel({
     dots: true,
-
     responsive: {
         100: { items: 1 }, // from zero to 480 screen width 4 items
         768: { items: 2 }, // from 480 screen widthto 768 6 items
