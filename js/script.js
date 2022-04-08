@@ -10,9 +10,9 @@ const menBtn2 = document.querySelector(".menu-button");
 const body = document.querySelector("body")
 
 const offset = 50;
-// window.onbeforeunload = function() {
-//     window.scrollTo(0, 0);
-// }
+window.onbeforeunload = function() {
+    window.scrollTo(0, 0);
+}
 window.addEventListener("scroll", () => {
     if (pageYOffset > offset) {
         navbar.classList.add('navbar-active')
